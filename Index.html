@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-List</title>
+    <link rel="stylesheet" href="./Style.css">
+</head>
+<body>
+    <nav>
+        <h1>Todo-list</h1>
+        <a href="./Archive.html">Archive</a>
+    </nav>
+    <div class="container">
+        <form action="" class="main">
+            <h1>Todo-List</h1>
+            <label>Name</label>
+            <input type="text" name="User" required/>
+
+            <label>Priority</label>
+            <select name="Priority" required>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+            </select>
+
+            <label>Status</label>
+            <select name="Status" required>
+                <option value="pending">Pending</option>
+                <option value="fulfilled">Complete</option>
+            </select>
+
+            <button type="submit">Add</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody class="table">
+                <tr>
+                    <td>Learn React.</td>
+                    <td>Medium</td>
+                    <td>
+                        <button class="toggle">🔄 Pending</button>
+                    </td>
+                    <td>
+                        <button class="archiveBtn delete-button">Archive</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="./Index.js"></script>
+</html>

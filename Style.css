@@ -1,0 +1,201 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+nav {
+    background-color: #171630;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+    font-size: 24px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fbc929;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #fce28a;
+    color: black;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    padding: 20px;
+    align-items: start;
+}
+
+
+.main {
+    background-color: #fce28a;
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main h1 {
+    color: #171630;
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.main label {
+    display: block;
+    margin-bottom: 8px;
+    color: #171630;
+    font-weight: bold;
+}
+
+.main input[type="text"], .main select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.main button {
+    width: 100%;
+    padding: 10px;
+    background-color: #171630;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main button:hover {
+    background-color: #3a3454;
+    color: black;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #171630;
+    color: white;
+}
+
+thead th {
+    padding: 12px;
+    text-align: left;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+tbody td {
+    padding: 12px;
+    text-align: left;
+}
+
+
+button.toggle {
+    background-color: #fbc929;
+    color: #171630;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+button.toggle:hover {
+    background-color: #fce28a;
+    color: black;
+}
+
+button.archiveBtn {
+    background-color: #a96cad;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button.archiveBtn:hover {
+    background-color: #c3abd0;
+    color: black;
+}
+
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin-bottom: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fce28a;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    td {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        text-align: center;
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        color: #171630;
+        white-space: nowrap;
+    }
+}

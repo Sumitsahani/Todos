@@ -1,0 +1,128 @@
+/* Archive Page CSS */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #171630; /* Dark background color */
+    color: white; /* Text color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow effect */
+    margin-top: 20px; /* Space from the top */
+}
+
+nav h1 {
+    font-size: 24px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fbc929; /* Link color */
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition for both background and text color */
+}
+
+nav a:hover {
+    background-color: #fce28a; /* Hover background color */
+    color: black; /* Text color change on hover */
+}
+
+/* Table Styling */
+.archiveTable {
+    width: 80%; /* Not full width */
+    margin: 40px auto; /* Center the table and add some space around it */
+    border-collapse: collapse;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow effect */
+    transition: transform 0.3s ease; /* Animation effect */
+}
+
+.archiveTable:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+thead {
+    background-color: #171630; /* Header background color */
+    color: white; /* Header text color */
+}
+
+thead th {
+    padding: 12px;
+    text-align: left;
+}
+
+tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+tbody td {
+    padding: 12px;
+    text-align: left;
+}
+
+/* Button Styling */
+button.restoreBtn, button.deleteBtn {
+    background-color: #a96cad;
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Larger button size */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Button animations */
+}
+
+button.restoreBtn:hover, button.deleteBtn:hover {
+    background-color: #c3abd0;
+    color: black; /* Text color change on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .archiveTable {
+        width: 100%; /* Full width on small screens */
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin-bottom: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fce28a;
+        border-radius: 8px;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+    }
+
+    td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        color: #171630;
+        white-space: nowrap;
+    }
+}
